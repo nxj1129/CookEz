@@ -1,0 +1,551 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1848278D2563E53A0031438B /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848278C2563E53A0031438B /* Session.swift */; };
+		1848278F2563EF800031438B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848278E2563EF800031438B /* LoginView.swift */; };
+		185B327B255175E400D0018C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B327A255175E400D0018C /* DetailView.swift */; };
+		185B327D2551771100D0018C /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B327C2551771100D0018C /* StoreView.swift */; };
+		185B327F2551776E00D0018C /* Stores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B327E2551776E00D0018C /* Stores.swift */; };
+		185B32812551780900D0018C /* StoreCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B32802551780900D0018C /* StoreCoordinates.swift */; };
+		185B3284255179CF00D0018C /* StoresViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B3283255179CF00D0018C /* StoresViewModels.swift */; };
+		185B32862551808B00D0018C /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B32852551808B00D0018C /* FavoritesView.swift */; };
+		185DB2552563DCFA00C29A5D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 185DB2542563DCFA00C29A5D /* GoogleService-Info.plist */; };
+		186AC4F12551CBC9001353E3 /* The Bugatten.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 186AC4F02551CBC9001353E3 /* The Bugatten.ttf */; };
+		18E6A1372550547600B8EC97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E6A1362550547600B8EC97 /* AppDelegate.swift */; };
+		18E6A1392550547600B8EC97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E6A1382550547600B8EC97 /* SceneDelegate.swift */; };
+		18E6A13C2550547600B8EC97 /* FinalProject_Jugovac.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18E6A13A2550547600B8EC97 /* FinalProject_Jugovac.xcdatamodeld */; };
+		18E6A13E2550547600B8EC97 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E6A13D2550547600B8EC97 /* ContentView.swift */; };
+		18E6A1402550547800B8EC97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E6A13F2550547800B8EC97 /* Assets.xcassets */; };
+		18E6A1432550547800B8EC97 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E6A1422550547800B8EC97 /* Preview Assets.xcassets */; };
+		18E6A1462550547800B8EC97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E6A1442550547800B8EC97 /* LaunchScreen.storyboard */; };
+		18E6A150255054D700B8EC97 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E6A14F255054D700B8EC97 /* Recipe.swift */; };
+		18E6A152255054F700B8EC97 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E6A151255054F700B8EC97 /* Network.swift */; };
+		18E6A1552550559800B8EC97 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 18E6A1542550559800B8EC97 /* Alamofire */; };
+		18E6A1582550561000B8EC97 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E6A1572550561000B8EC97 /* MainView.swift */; };
+		9D72A397286BD13FEFB2094A /* Pods_FinalProject_Jugovac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8147183BCB51AA6EAAF2A44 /* Pods_FinalProject_Jugovac.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1848278C2563E53A0031438B /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		1848278E2563EF800031438B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		185B327A255175E400D0018C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		185B327C2551771100D0018C /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
+		185B327E2551776E00D0018C /* Stores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stores.swift; sourceTree = "<group>"; };
+		185B32802551780900D0018C /* StoreCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCoordinates.swift; sourceTree = "<group>"; };
+		185B3283255179CF00D0018C /* StoresViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresViewModels.swift; sourceTree = "<group>"; };
+		185B32852551808B00D0018C /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		185DB2542563DCFA00C29A5D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		186AC4F02551CBC9001353E3 /* The Bugatten.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "The Bugatten.ttf"; sourceTree = "<group>"; };
+		18E6A1332550547600B8EC97 /* FinalProject-Jugovac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FinalProject-Jugovac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18E6A1362550547600B8EC97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		18E6A1382550547600B8EC97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		18E6A13B2550547600B8EC97 /* FinalProject_Jugovac.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinalProject_Jugovac.xcdatamodel; sourceTree = "<group>"; };
+		18E6A13D2550547600B8EC97 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		18E6A13F2550547800B8EC97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18E6A1422550547800B8EC97 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		18E6A1452550547800B8EC97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18E6A1472550547800B8EC97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18E6A14F255054D700B8EC97 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		18E6A151255054F700B8EC97 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		18E6A1572550561000B8EC97 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		6DCB9960CBB52DB0C0B23942 /* Pods-FinalProject-Jugovac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject-Jugovac.debug.xcconfig"; path = "Target Support Files/Pods-FinalProject-Jugovac/Pods-FinalProject-Jugovac.debug.xcconfig"; sourceTree = "<group>"; };
+		83F1B13B8C0F5D6F029D29B4 /* Pods-FinalProject-Jugovac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject-Jugovac.release.xcconfig"; path = "Target Support Files/Pods-FinalProject-Jugovac/Pods-FinalProject-Jugovac.release.xcconfig"; sourceTree = "<group>"; };
+		A8147183BCB51AA6EAAF2A44 /* Pods_FinalProject_Jugovac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalProject_Jugovac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18E6A1302550547600B8EC97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18E6A1552550559800B8EC97 /* Alamofire in Frameworks */,
+				9D72A397286BD13FEFB2094A /* Pods_FinalProject_Jugovac.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1848278B2563E5280031438B /* FIrebase */ = {
+			isa = PBXGroup;
+			children = (
+				1848278C2563E53A0031438B /* Session.swift */,
+			);
+			path = FIrebase;
+			sourceTree = "<group>";
+		};
+		185B3282255179AA00D0018C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				185B3283255179CF00D0018C /* StoresViewModels.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		18E6A12A2550547600B8EC97 = {
+			isa = PBXGroup;
+			children = (
+				18E6A1352550547600B8EC97 /* FinalProject-Jugovac */,
+				18E6A1342550547600B8EC97 /* Products */,
+				8DF7C22C402D33497671899B /* Pods */,
+				2F11F072BD17EE46B2E5B0F2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		18E6A1342550547600B8EC97 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18E6A1332550547600B8EC97 /* FinalProject-Jugovac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18E6A1352550547600B8EC97 /* FinalProject-Jugovac */ = {
+			isa = PBXGroup;
+			children = (
+				1848278B2563E5280031438B /* FIrebase */,
+				18E6A14D2550549600B8EC97 /* Lifecycle */,
+				185B3282255179AA00D0018C /* ViewModels */,
+				18E6A156255055B400B8EC97 /* Views */,
+				18E6A14E255054CA00B8EC97 /* Models */,
+				18E6A13D2550547600B8EC97 /* ContentView.swift */,
+				18E6A13F2550547800B8EC97 /* Assets.xcassets */,
+				18E6A1442550547800B8EC97 /* LaunchScreen.storyboard */,
+				186AC4F02551CBC9001353E3 /* The Bugatten.ttf */,
+				18E6A1472550547800B8EC97 /* Info.plist */,
+				185DB2542563DCFA00C29A5D /* GoogleService-Info.plist */,
+				18E6A13A2550547600B8EC97 /* FinalProject_Jugovac.xcdatamodeld */,
+				18E6A1412550547800B8EC97 /* Preview Content */,
+			);
+			path = "FinalProject-Jugovac";
+			sourceTree = "<group>";
+		};
+		18E6A1412550547800B8EC97 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				18E6A1422550547800B8EC97 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		18E6A14D2550549600B8EC97 /* Lifecycle */ = {
+			isa = PBXGroup;
+			children = (
+				18E6A1362550547600B8EC97 /* AppDelegate.swift */,
+				18E6A1382550547600B8EC97 /* SceneDelegate.swift */,
+			);
+			path = Lifecycle;
+			sourceTree = "<group>";
+		};
+		18E6A14E255054CA00B8EC97 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				18E6A14F255054D700B8EC97 /* Recipe.swift */,
+				18E6A151255054F700B8EC97 /* Network.swift */,
+				185B327E2551776E00D0018C /* Stores.swift */,
+				185B32802551780900D0018C /* StoreCoordinates.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		18E6A156255055B400B8EC97 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				18E6A1572550561000B8EC97 /* MainView.swift */,
+				185B327A255175E400D0018C /* DetailView.swift */,
+				185B327C2551771100D0018C /* StoreView.swift */,
+				185B32852551808B00D0018C /* FavoritesView.swift */,
+				1848278E2563EF800031438B /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2F11F072BD17EE46B2E5B0F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8147183BCB51AA6EAAF2A44 /* Pods_FinalProject_Jugovac.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8DF7C22C402D33497671899B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6DCB9960CBB52DB0C0B23942 /* Pods-FinalProject-Jugovac.debug.xcconfig */,
+				83F1B13B8C0F5D6F029D29B4 /* Pods-FinalProject-Jugovac.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18E6A1322550547600B8EC97 /* FinalProject-Jugovac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18E6A14A2550547800B8EC97 /* Build configuration list for PBXNativeTarget "FinalProject-Jugovac" */;
+			buildPhases = (
+				8A3311C15653D2AA5ED9C883 /* [CP] Check Pods Manifest.lock */,
+				18E6A12F2550547600B8EC97 /* Sources */,
+				18E6A1302550547600B8EC97 /* Frameworks */,
+				18E6A1312550547600B8EC97 /* Resources */,
+				2856BE0ADDD3539796D31C8D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FinalProject-Jugovac";
+			packageProductDependencies = (
+				18E6A1542550559800B8EC97 /* Alamofire */,
+			);
+			productName = "FinalProject-Jugovac";
+			productReference = 18E6A1332550547600B8EC97 /* FinalProject-Jugovac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18E6A12B2550547600B8EC97 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Niko Jugovac";
+				TargetAttributes = {
+					18E6A1322550547600B8EC97 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = 18E6A12E2550547600B8EC97 /* Build configuration list for PBXProject "FinalProject-Jugovac" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18E6A12A2550547600B8EC97;
+			packageReferences = (
+				18E6A1532550559800B8EC97 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = 18E6A1342550547600B8EC97 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18E6A1322550547600B8EC97 /* FinalProject-Jugovac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18E6A1312550547600B8EC97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18E6A1462550547800B8EC97 /* LaunchScreen.storyboard in Resources */,
+				18E6A1432550547800B8EC97 /* Preview Assets.xcassets in Resources */,
+				185DB2552563DCFA00C29A5D /* GoogleService-Info.plist in Resources */,
+				18E6A1402550547800B8EC97 /* Assets.xcassets in Resources */,
+				186AC4F12551CBC9001353E3 /* The Bugatten.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2856BE0ADDD3539796D31C8D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FinalProject-Jugovac/Pods-FinalProject-Jugovac-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FinalProject-Jugovac/Pods-FinalProject-Jugovac-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FinalProject-Jugovac/Pods-FinalProject-Jugovac-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A3311C15653D2AA5ED9C883 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FinalProject-Jugovac-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18E6A12F2550547600B8EC97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1848278D2563E53A0031438B /* Session.swift in Sources */,
+				185B3284255179CF00D0018C /* StoresViewModels.swift in Sources */,
+				18E6A1372550547600B8EC97 /* AppDelegate.swift in Sources */,
+				1848278F2563EF800031438B /* LoginView.swift in Sources */,
+				185B32862551808B00D0018C /* FavoritesView.swift in Sources */,
+				185B327B255175E400D0018C /* DetailView.swift in Sources */,
+				18E6A13C2550547600B8EC97 /* FinalProject_Jugovac.xcdatamodeld in Sources */,
+				18E6A152255054F700B8EC97 /* Network.swift in Sources */,
+				18E6A13E2550547600B8EC97 /* ContentView.swift in Sources */,
+				185B327F2551776E00D0018C /* Stores.swift in Sources */,
+				18E6A1392550547600B8EC97 /* SceneDelegate.swift in Sources */,
+				18E6A1582550561000B8EC97 /* MainView.swift in Sources */,
+				185B32812551780900D0018C /* StoreCoordinates.swift in Sources */,
+				185B327D2551771100D0018C /* StoreView.swift in Sources */,
+				18E6A150255054D700B8EC97 /* Recipe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		18E6A1442550547800B8EC97 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18E6A1452550547800B8EC97 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18E6A1482550547800B8EC97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		18E6A1492550547800B8EC97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18E6A14B2550547800B8EC97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DCB9960CBB52DB0C0B23942 /* Pods-FinalProject-Jugovac.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"FinalProject-Jugovac/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "FinalProject-Jugovac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "rit.FinalProject-Jugovac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18E6A14C2550547800B8EC97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83F1B13B8C0F5D6F029D29B4 /* Pods-FinalProject-Jugovac.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"FinalProject-Jugovac/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "FinalProject-Jugovac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "rit.FinalProject-Jugovac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18E6A12E2550547600B8EC97 /* Build configuration list for PBXProject "FinalProject-Jugovac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18E6A1482550547800B8EC97 /* Debug */,
+				18E6A1492550547800B8EC97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18E6A14A2550547800B8EC97 /* Build configuration list for PBXNativeTarget "FinalProject-Jugovac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18E6A14B2550547800B8EC97 /* Debug */,
+				18E6A14C2550547800B8EC97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18E6A1532550559800B8EC97 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18E6A1542550559800B8EC97 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18E6A1532550559800B8EC97 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		18E6A13A2550547600B8EC97 /* FinalProject_Jugovac.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				18E6A13B2550547600B8EC97 /* FinalProject_Jugovac.xcdatamodel */,
+			);
+			currentVersion = 18E6A13B2550547600B8EC97 /* FinalProject_Jugovac.xcdatamodel */;
+			path = FinalProject_Jugovac.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 18E6A12B2550547600B8EC97 /* Project object */;
+}
