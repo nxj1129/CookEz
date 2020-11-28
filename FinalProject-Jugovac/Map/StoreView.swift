@@ -192,7 +192,6 @@ struct StoreView: UIViewRepresentable {
         func requestUserLocation() {
             if CLLocationManager.authorizationStatus() != .authorizedWhenInUse {
                 locationManager.requestWhenInUseAuthorization()
-                // Show alert only if this is not the first time app is running
             }
             
             locationManager.startUpdatingLocation()
@@ -216,32 +215,3 @@ struct StoreView: UIViewRepresentable {
         }
     }
 }
-
-
-
-      // v1
-//            for place in data {
-//                let annotation = MKPointAnnotation()
-//                annotation.coordinate = place.coordinate
-//                annotation.title = place.name
-//                annotation.subtitle = place.about
-//                mapView.addAnnotation(annotation)
-//            }
-
-            // v2
-//            for place in data {
-//                let annotation = PlaceAnnotation(place: place)
-//                mapView.addAnnotation(annotation)
-//            }
-
-            // v3
-//            let annotations = data.map({ PlaceAnnotation(place: $0) })
-//            mapView.addAnnotations(annotations)
-
-            // v4
-//            let annotations = data.map(PlaceAnnotation.init)
-//            mapView.addAnnotations(annotations)
-
-            // v5
-//            mapView.addAnnotations(data.map({ PlaceAnnotation(place: $0) }))
-
