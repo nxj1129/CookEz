@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180A18A9258222F900529E72 /* StoreAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180A18A8258222F900529E72 /* StoreAnnotation.swift */; };
+		180A18AB2582232200529E72 /* MapConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180A18AA2582232200529E72 /* MapConfig.swift */; };
+		180A18AD258223BB00529E72 /* MapUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180A18AC258223BB00529E72 /* MapUtils.swift */; };
 		1848278D2563E53A0031438B /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848278C2563E53A0031438B /* Session.swift */; };
 		1848278F2563EF800031438B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848278E2563EF800031438B /* LoginView.swift */; };
+		185A3B6425755894003E60C4 /* CustomRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185A3B6325755894003E60C4 /* CustomRow.swift */; };
+		185A8CD1257BE6E000521B84 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185A8CD0257BE6E000521B84 /* ColorExtension.swift */; };
+		185A8CD3257BEB4400521B84 /* ShapeCornersExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185A8CD2257BEB4400521B84 /* ShapeCornersExtension.swift */; };
 		185B327B255175E400D0018C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B327A255175E400D0018C /* DetailView.swift */; };
 		185B327D2551771100D0018C /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B327C2551771100D0018C /* StoreView.swift */; };
 		185B327F2551776E00D0018C /* Stores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B327E2551776E00D0018C /* Stores.swift */; };
@@ -16,7 +22,9 @@
 		185B3284255179CF00D0018C /* StoresViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B3283255179CF00D0018C /* StoresViewModels.swift */; };
 		185B32862551808B00D0018C /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B32852551808B00D0018C /* FavoritesView.swift */; };
 		185DB2552563DCFA00C29A5D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 185DB2542563DCFA00C29A5D /* GoogleService-Info.plist */; };
+		1869E78825666AFF00F1DEEC /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1869E78725666AFF00F1DEEC /* RecipesView.swift */; };
 		186AC4F12551CBC9001353E3 /* The Bugatten.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 186AC4F02551CBC9001353E3 /* The Bugatten.ttf */; };
+		18BA0E002572510A0033F624 /* StoresMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA0DFF2572510A0033F624 /* StoresMapView.swift */; };
 		18E6A1372550547600B8EC97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E6A1362550547600B8EC97 /* AppDelegate.swift */; };
 		18E6A1392550547600B8EC97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E6A1382550547600B8EC97 /* SceneDelegate.swift */; };
 		18E6A13C2550547600B8EC97 /* FinalProject_Jugovac.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18E6A13A2550547600B8EC97 /* FinalProject_Jugovac.xcdatamodeld */; };
@@ -28,12 +36,19 @@
 		18E6A152255054F700B8EC97 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E6A151255054F700B8EC97 /* Network.swift */; };
 		18E6A1552550559800B8EC97 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 18E6A1542550559800B8EC97 /* Alamofire */; };
 		18E6A1582550561000B8EC97 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E6A1572550561000B8EC97 /* MainView.swift */; };
+		18FB7F0E2576A478005C0C16 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 18FB7F0D2576A478005C0C16 /* SDWebImageSwiftUI */; };
 		9D72A397286BD13FEFB2094A /* Pods_FinalProject_Jugovac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8147183BCB51AA6EAAF2A44 /* Pods_FinalProject_Jugovac.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		180A18A8258222F900529E72 /* StoreAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreAnnotation.swift; sourceTree = "<group>"; };
+		180A18AA2582232200529E72 /* MapConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapConfig.swift; sourceTree = "<group>"; };
+		180A18AC258223BB00529E72 /* MapUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUtils.swift; sourceTree = "<group>"; };
 		1848278C2563E53A0031438B /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		1848278E2563EF800031438B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		185A3B6325755894003E60C4 /* CustomRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRow.swift; sourceTree = "<group>"; };
+		185A8CD0257BE6E000521B84 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		185A8CD2257BEB4400521B84 /* ShapeCornersExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeCornersExtension.swift; sourceTree = "<group>"; };
 		185B327A255175E400D0018C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		185B327C2551771100D0018C /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 		185B327E2551776E00D0018C /* Stores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stores.swift; sourceTree = "<group>"; };
@@ -41,7 +56,9 @@
 		185B3283255179CF00D0018C /* StoresViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresViewModels.swift; sourceTree = "<group>"; };
 		185B32852551808B00D0018C /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		185DB2542563DCFA00C29A5D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1869E78725666AFF00F1DEEC /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
 		186AC4F02551CBC9001353E3 /* The Bugatten.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "The Bugatten.ttf"; sourceTree = "<group>"; };
+		18BA0DFF2572510A0033F624 /* StoresMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresMapView.swift; sourceTree = "<group>"; };
 		18E6A1332550547600B8EC97 /* FinalProject-Jugovac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FinalProject-Jugovac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E6A1362550547600B8EC97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18E6A1382550547600B8EC97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18FB7F0E2576A478005C0C16 /* SDWebImageSwiftUI in Frameworks */,
 				18E6A1552550559800B8EC97 /* Alamofire in Frameworks */,
 				9D72A397286BD13FEFB2094A /* Pods_FinalProject_Jugovac.framework in Frameworks */,
 			);
@@ -80,12 +98,33 @@
 			path = FIrebase;
 			sourceTree = "<group>";
 		};
+		185A8CCF257BE6CB00521B84 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				185A8CD0257BE6E000521B84 /* ColorExtension.swift */,
+				185A8CD2257BEB4400521B84 /* ShapeCornersExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		185B3282255179AA00D0018C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				185B3283255179CF00D0018C /* StoresViewModels.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		18BA0DFE257250E60033F624 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				18BA0DFF2572510A0033F624 /* StoresMapView.swift */,
+				185B327C2551771100D0018C /* StoreView.swift */,
+				180A18A8258222F900529E72 /* StoreAnnotation.swift */,
+				180A18AA2582232200529E72 /* MapConfig.swift */,
+				180A18AC258223BB00529E72 /* MapUtils.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		18E6A12A2550547600B8EC97 = {
@@ -109,8 +148,10 @@
 		18E6A1352550547600B8EC97 /* FinalProject-Jugovac */ = {
 			isa = PBXGroup;
 			children = (
-				1848278B2563E5280031438B /* FIrebase */,
 				18E6A14D2550549600B8EC97 /* Lifecycle */,
+				185A8CCF257BE6CB00521B84 /* Extensions */,
+				18BA0DFE257250E60033F624 /* Map */,
+				1848278B2563E5280031438B /* FIrebase */,
 				185B3282255179AA00D0018C /* ViewModels */,
 				18E6A156255055B400B8EC97 /* Views */,
 				18E6A14E255054CA00B8EC97 /* Models */,
@@ -157,11 +198,12 @@
 		18E6A156255055B400B8EC97 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				18E6A1572550561000B8EC97 /* MainView.swift */,
 				185B327A255175E400D0018C /* DetailView.swift */,
-				185B327C2551771100D0018C /* StoreView.swift */,
 				185B32852551808B00D0018C /* FavoritesView.swift */,
 				1848278E2563EF800031438B /* LoginView.swift */,
+				18E6A1572550561000B8EC97 /* MainView.swift */,
+				1869E78725666AFF00F1DEEC /* RecipesView.swift */,
+				185A3B6325755894003E60C4 /* CustomRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -203,6 +245,7 @@
 			name = "FinalProject-Jugovac";
 			packageProductDependencies = (
 				18E6A1542550559800B8EC97 /* Alamofire */,
+				18FB7F0D2576A478005C0C16 /* SDWebImageSwiftUI */,
 			);
 			productName = "FinalProject-Jugovac";
 			productReference = 18E6A1332550547600B8EC97 /* FinalProject-Jugovac.app */;
@@ -234,6 +277,7 @@
 			mainGroup = 18E6A12A2550547600B8EC97;
 			packageReferences = (
 				18E6A1532550559800B8EC97 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				18FB7F0C2576A478005C0C16 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 18E6A1342550547600B8EC97 /* Products */;
 			projectDirPath = "";
@@ -307,7 +351,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1848278D2563E53A0031438B /* Session.swift in Sources */,
+				18BA0E002572510A0033F624 /* StoresMapView.swift in Sources */,
 				185B3284255179CF00D0018C /* StoresViewModels.swift in Sources */,
+				1869E78825666AFF00F1DEEC /* RecipesView.swift in Sources */,
 				18E6A1372550547600B8EC97 /* AppDelegate.swift in Sources */,
 				1848278F2563EF800031438B /* LoginView.swift in Sources */,
 				185B32862551808B00D0018C /* FavoritesView.swift in Sources */,
@@ -318,9 +364,15 @@
 				185B327F2551776E00D0018C /* Stores.swift in Sources */,
 				18E6A1392550547600B8EC97 /* SceneDelegate.swift in Sources */,
 				18E6A1582550561000B8EC97 /* MainView.swift in Sources */,
+				180A18AB2582232200529E72 /* MapConfig.swift in Sources */,
 				185B32812551780900D0018C /* StoreCoordinates.swift in Sources */,
 				185B327D2551771100D0018C /* StoreView.swift in Sources */,
+				180A18A9258222F900529E72 /* StoreAnnotation.swift in Sources */,
+				180A18AD258223BB00529E72 /* MapUtils.swift in Sources */,
 				18E6A150255054D700B8EC97 /* Recipe.swift in Sources */,
+				185A3B6425755894003E60C4 /* CustomRow.swift in Sources */,
+				185A8CD3257BEB4400521B84 /* ShapeCornersExtension.swift in Sources */,
+				185A8CD1257BE6E000521B84 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,7 +520,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "rit.FinalProject-Jugovac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -488,7 +540,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "rit.FinalProject-Jugovac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -524,6 +576,14 @@
 				minimumVersion = 5.3.0;
 			};
 		};
+		18FB7F0C2576A478005C0C16 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -531,6 +591,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 18E6A1532550559800B8EC97 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		18FB7F0D2576A478005C0C16 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18FB7F0C2576A478005C0C16 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 

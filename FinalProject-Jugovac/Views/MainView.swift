@@ -9,31 +9,36 @@
 import SwiftUI
 
 struct MainView: View {
+
+    @ObservedObject var network = Network()
+    let session: Session
+    
     var body: some View {
-        VStack {
-            Text("CookEz").font(.title)
-
-            List {
-                Text("asdas")
-                Text("asdas")
-                Text("asdas")
-            }
+        NavigationView{
+            TabView{
+                RecipesView(network: network, session: session)
+                    .tabItem{
+                        Image(systemName: "book.fill")
+                        Text("Recipes")
+                }.tag(0)
                 
-            Spacer()
-            
-            TabView {
-                tabItem { Text("Stores") }.tag(1)
-                tabItem { Text("Favorites") }.tag(2)
-                tabItem { Text("Filters") }.tag(3)
-                tabItem { Text("Add Recipe") }.tag(4)
+                StoresMapView()
+                    .tabItem{
+                        Image(systemName: "cart.fill")
+                        Text("Stores Map")
+                }.tag(1)
+                
+                FavoritesView(network: network)
+                    .tabItem{
+                        Image(systemName: "heart.fill")
+                        Text("Favorites")
+                }.tag(2)
             }
-
+            .onAppear(){
+                UITabBar.appearance().barTintColor = UIColor.tabBarColor
+            }
+            .accentColor(.lightYellow)
+            .shadow(color: .lightYellow, radius: 8, x: 0, y: 0)
         }
-    }
-}
-
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
     }
 }

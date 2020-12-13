@@ -14,6 +14,7 @@ struct Stores{
     let about: String
     let latitude: Double
     let longitude: Double
+    let url: String
 }
 
 extension Stores{

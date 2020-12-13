@@ -8,26 +8,19 @@
 
 import Foundation
 
-struct Recipe: Codable{
+struct Recipe: Codable, Identifiable{
     var id: Int
     var title: String
-    var imageUrlString: String?
+    var imageUrl: URL?
     var instructions: String
-    
-    var imageUrl: URL?{
-        get{
-            guard let url = URL(string: imageUrlString ?? "") else{
-                return nil
-            }
-            return url
-        }
-    }
-    
+    var readyInMinutes: Int
+
     enum CodingKeys: String, CodingKey{
         case id = "id"
         case title = "title"
-        case imageUrlString = "image"
+        case imageUrl = "image"
         case instructions = "instructions"
+        case readyInMinutes = "readyInMinutes"
     }
 }
 

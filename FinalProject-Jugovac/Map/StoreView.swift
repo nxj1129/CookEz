@@ -7,58 +7,8 @@
 //
 
 import SwiftUI
+import UIKit
 import MapKit
-
-enum DirectionsError: Error, LocalizedError {
-    case userLocationNotAvailable
-    case url(message: String)
-    
-    var errorDescription: String? {
-        localizedDescription
-    }
-    
-    var localizedDescription: String {
-        switch self {
-        case .userLocationNotAvailable:
-            return "User location is not available"
-        case .url(let message):
-            return message
-        }
-    }
-}
-
-class StoreAnnotation: NSObject, MKAnnotation {
-    static var reuseIdentifier: String {
-        String(describing: self)
-    }
-    
-    var title: String? {
-        model.name
-    }
-
-    var subtitle: String? {
-        model.about
-    }
-
-    var coordinate: CLLocationCoordinate2D {
-        model.coordinates
-    }
-
-    private(set) var model: Stores
-
-    init(store: Stores) {
-        model = store
-    }
-}
-
-struct MapConfig {
-    static let initialLocation = CLLocationCoordinate2D(latitude: 45.782722,
-                                                        longitude: 15.981194)
-
-    static let regionRadius: CLLocationDistance = 1000
-
-    private init() {}
-}
 
 struct StoreView: UIViewRepresentable {
     
@@ -70,6 +20,7 @@ struct StoreView: UIViewRepresentable {
     
     @Binding var data: [Stores]
     @Binding var mapState: MapState?
+    @Binding var mapType: MKMapType
 
     func makeCoordinator() -> Coordinator {
         Coordinator(parent: self)
@@ -83,17 +34,18 @@ struct StoreView: UIViewRepresentable {
 
     func updateUIView(_ uiView: MKMapView, context: Context) {
         context.coordinator.createAnnotations(data: data)
+        uiView.mapType = self.mapType
     }
 
     class Coordinator: NSObject, MKMapViewDelegate {
         var parent: StoreView
         var mapView: MKMapView
-        var locationManager: CLLocationManager
+        var mapUtils: MapUtils
 
         init(parent: StoreView) {
             self.parent = parent
             self.mapView = MKMapView()
-            self.locationManager = CLLocationManager()
+            self.mapUtils = MapUtils()
             
             super.init()
             
@@ -114,34 +66,31 @@ struct StoreView: UIViewRepresentable {
                 return nil
             }
             
+            let annotationView = MKMarkerAnnotationView(annotation: storeAnnotation,
+            reuseIdentifier: StoreAnnotation.reuseIdentifier)
+            
             if let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: StoreAnnotation.reuseIdentifier) as? MKMarkerAnnotationView {
                 
                 annotationView.annotation = storeAnnotation
-                annotationView.markerTintColor = UIColor.orange
-                annotationView.glyphImage = UIImage(systemName: "person.fill")
-//                annotationView.displayPriority = .required
+                annotationView.markerTintColor = UIColor.green
+                annotationView.glyphImage = UIImage(systemName: "cart.fill")
 
                 return annotationView
             }
             
-            let annotationView = MKMarkerAnnotationView(annotation: storeAnnotation,
-                                                        reuseIdentifier: StoreAnnotation.reuseIdentifier)
-            annotationView.markerTintColor = UIColor.orange
-            annotationView.glyphImage = UIImage(systemName: "person.fill")
             annotationView.canShowCallout = true
-            
-            let infoButton = UIButton(type: .infoLight)
-            infoButton.tag = 0
+            let urlButton = UIButton(type: .infoLight)
+            urlButton.setImage(UIImage(systemName: "link.circle"), for: .normal)
+            urlButton.tag = 0
+            urlButton.tintColor = .black
+            annotationView.leftCalloutAccessoryView = urlButton
             
             let directionsButton = UIButton(type: .infoLight)
             directionsButton.setImage(UIImage(systemName: "car"), for: .normal)
             directionsButton.tag = 1
-            
-            annotationView.leftCalloutAccessoryView = infoButton
+            directionsButton.tintColor = .black
             annotationView.rightCalloutAccessoryView = directionsButton
-            
-//            annotationView.displayPriority = .required
-            
+
             return annotationView
         }
         
@@ -153,10 +102,12 @@ struct StoreView: UIViewRepresentable {
             
             switch control.tag {
             case 0:
-                parent.mapState = MapState(store: storeAnnotation.model)
+                if let url = URL(string: storeAnnotation.url){
+                    UIApplication.shared.open(url)
+                }
             case 1:
                 do {
-                    try openDirections(for: storeAnnotation.model)
+                    try mapUtils.openDirections(for: storeAnnotation.model)
                 } catch {
                     parent.mapState = MapState(error: error)
                 }
@@ -165,36 +116,12 @@ struct StoreView: UIViewRepresentable {
             }
         }
         
-        func openDirections(for store: Stores) throws {
-            guard let userLocation = locationManager.location else {
-                throw DirectionsError.userLocationNotAvailable
-            }
-            
-            let userLat = userLocation.coordinate.latitude
-            let userLong = userLocation.coordinate.longitude
-            
-            let destinationLat = store.coordinates.latitude
-            let destinationLong = store.coordinates.longitude
-            
-            let urlString = "https://maps.apple.com/?daddr=(\(destinationLat),\(destinationLong))&dirflg=d&saddr=(\(userLat),\(userLong))"
-            
-            guard let url = URL(string: urlString) else {
-                throw DirectionsError.url(message: "Url not valid")
-            }
-            
-            guard UIApplication.shared.canOpenURL(url) else {
-                throw DirectionsError.url(message: "Cannot open url")
-            }
-            
-            UIApplication.shared.open(url, options: [:])
-        }
-        
         func requestUserLocation() {
             if CLLocationManager.authorizationStatus() != .authorizedWhenInUse {
-                locationManager.requestWhenInUseAuthorization()
+                mapUtils.locationManager.requestWhenInUseAuthorization()
             }
             
-            locationManager.startUpdatingLocation()
+            mapUtils.locationManager.startUpdatingLocation()
             mapView.showsUserLocation = true
         }
 

@@ -29,10 +29,9 @@ struct SignInView: View {
     var body: some View{
         VStack{
             ZStack{
-                
-                LinearGradient(gradient: .init(colors: [Color("BgColor1"), Color("BgColor2")]), startPoint: .leading, endPoint: .trailing)
+                CustomGradient.mygradient
                     .edgesIgnoringSafeArea(.all)
-                
+                    
                 VStack{
                     Group{
                         Text("CookEz")
@@ -58,10 +57,13 @@ struct SignInView: View {
                             .frame(width: 20, height: 20)
                         
                         TextField("Enter email", text: $email)
+                            .autocapitalization(.none)
                             .padding(.leading, 12)
                             .background(Color.yellow)
                             .cornerRadius(25)
                             .font(.title)
+                            .shadow(color: Color.lightYellow, radius: 8, x: 0, y: 0)
+                            .padding(.bottom, 10)
                         
                     }.padding(12)
                     
@@ -75,13 +77,19 @@ struct SignInView: View {
                             .background(Color.yellow)
                             .cornerRadius(25)
                             .font(.title)
+                            .shadow(color: Color.lightYellow, radius: 8, x: 0, y: 0)
+                            .padding(.bottom, 10)
                         
                     }.padding(12)
                     
                     HStack{ 
                         Button(action: signIn){
-                            Text("Sign in").foregroundColor(.yellow).padding().frame(width: 150)
-                                .background(LinearGradient(gradient: .init(colors: [Color("BgColor1"),Color("BgColor2")]), startPoint: .leading, endPoint: .trailing))
+                            Text("Sign in")
+                                .fontWeight(.bold)
+                                .foregroundColor(.yellow)
+                                .padding()
+                                .frame(width: 150)
+                                .background(CustomGradient.mygradient)
                                 .cornerRadius(25)
                                 .shadow(radius: 20)
                         }
@@ -136,23 +144,12 @@ struct SignUpView: View {
     var body: some View{
         VStack{
             ZStack{
-                
-                LinearGradient(gradient: .init(colors: [Color("BgColor1"), Color("BgColor2")]), startPoint: .leading, endPoint: .trailing)
+                CustomGradient.mygradient
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack{
                     
-                    Group{
-                        Text("CookEz")
-                            .font(.custom("The Bugatten", size: 150))
-                            .foregroundColor(.yellow)
-                            .offset(y: 50)
-                        
-                        Text("Create an account")
-                            .font(.custom("The Bugatten", size: 80))
-                            .foregroundColor(.yellow)
-                    }.offset(y: -80)
-                    
+                    CreateAccountAndTitle()
                     
                     Image("CookEzIcon")
                         .resizable()
@@ -189,7 +186,7 @@ struct SignUpView: View {
                     HStack{
                         Button(action: signUp){
                             Text("Create Account").foregroundColor(.yellow).padding().frame(width: 200)
-                                .background(LinearGradient(gradient: .init(colors: [Color("BgColor1"),Color("BgColor2")]), startPoint: .leading, endPoint: .trailing))
+                                .background(CustomGradient.mygradient)
                                 .cornerRadius(25)
                                 .shadow(radius: 20)
                         }
@@ -203,6 +200,15 @@ struct SignUpView: View {
                     }.frame(height: 50)
                     .padding(.top, 8)
                     
+                    NavigationLink(destination: SignInView()){
+                        HStack{
+                            Text("Already have an account?")
+                                .foregroundColor(.white)
+                            Text("Sign In")
+                                .foregroundColor(.yellow)
+                        }.padding(.top, 20)
+                    }
+                    
                     Spacer().frame(height: 200)
                     
                 }.padding(.horizontal, 18)
@@ -210,8 +216,6 @@ struct SignUpView: View {
         }
     }
 }
-
-
 
 struct AuthView: View {
     var body: some View{
@@ -221,10 +225,23 @@ struct AuthView: View {
     }
 }
 
-
 struct AuthView_Previews: PreviewProvider {
     static var previews: some View{
         AuthView().environmentObject(Session())
     }
 }
 
+struct CreateAccountAndTitle: View {
+    var body: some View {
+        Group{
+            Text("CookEz")
+                .font(.custom("The Bugatten", size: 150))
+                .foregroundColor(.yellow)
+                .offset(y: 50)
+            
+            Text("Create an account")
+                .font(.custom("The Bugatten", size: 80))
+                .foregroundColor(.yellow)
+        }.offset(y: -80)
+    }
+}

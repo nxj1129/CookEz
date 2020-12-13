@@ -9,14 +9,27 @@
 import Foundation
 import Alamofire
 
-class Network{
-    static let shared = Network()
+class Network: ObservableObject{
+    
+    @Published var recipes = [Recipe]()
+    @Published private(set) var favorites: [Recipe] = []
+    @Published private(set) var recipeById: [Recipe] = []
     let jsonDecoder = JSONDecoder()
     
-    private init(){ }
+    init(){
+        getAllRecipes(completion: { recipes, error in
+            if let recipes = recipes {
+                self.recipes = recipes
+                print("\(recipes)")
+            }
+            
+            if let error = error {
+                print("Cannot get recipes because of: \(error)")
+            }
+        })
+    }
     
-    //add working API Key
-    let apiUrl = "https://api.spoonacular.com/recipes/random?number=10&apiKey=8d306fa0ef534c01ab50cfddabf26265"
+    let apiUrl = "https://api.spoonacular.com/recipes/random?number=10&apiKey=474285c210694095996a21179005570a"
     
     func getAllRecipes(completion: @escaping ([Recipe]?, Error?) -> Void){
         AF.request(apiUrl, method:.get).responseJSON{ (response) in
@@ -34,9 +47,8 @@ class Network{
         }
     }
     
-    //add working API Key
     func getSingleRecipeInformationUrl(id: Int) -> String {
-        return "https://api.spoonacular.com/recipes/\(id)/information?includeNutrition=false&apiKey=8d306fa0ef534c01ab50cfddabf26265"
+        return "https://api.spoonacular.com/recipes/\(id)/information?includeNutrition=false&apiKey=474285c210694095996a21179005570a"
     }
     
     func getRecipeById(id: Int, completion: @escaping (Recipe?, Error?) -> Void){
@@ -54,6 +66,22 @@ class Network{
                 completion(nil, error)
             }
         }
+    }
+    
+    func isFavorited(recipe: Recipe) -> Bool {
+        return favorites.contains(where: { $0.id == recipe.id })
+    }
+
+    func toggleFavorite(recipe: Recipe) {
+        if let index = favorites.firstIndex(where: { $0.id == recipe.id }) {
+            favorites.remove(at: index)
+        } else {
+            favorites.append(recipe)
+        }
+    }
+
+    func deleteFavorite(offset: IndexSet) {
+        favorites.remove(atOffsets: offset)
     }
     
 }

@@ -6,4 +6,13 @@
 //  Copyright © 2020 Niko Jugovac. All rights reserved.
 //
 
-import Foundation
+import MapKit
+
+struct MapConfig {
+    static let initialLocation = CLLocationCoordinate2D(latitude: 45.809315,
+                                                        longitude: 15.981823)
+    
+    static let regionRadius: CLLocationDistance = 1500
+    
+    private init() {}
+}
