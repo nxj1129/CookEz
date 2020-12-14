@@ -29,15 +29,15 @@ struct DetailView: View{
             if network.isFavorited(recipe: recipe) {
                 Image(systemName: "heart.fill")
                     .accentColor(.red)
-                    .frame(width: 30, height: 30)
+                    .frame(width: 40, height: 40)
             } else {
                 Image(systemName: "heart")
-                    .frame(width: 30, height: 30)
+                    .frame(width: 40, height: 40)
                     .accentColor(.red)
             }
         }
     }
-            
+    
     func get() {
         network.getRecipeById(id: recipe.id, completion: {recipe, error in
             guard let recipe = recipe else{
@@ -48,50 +48,51 @@ struct DetailView: View{
     }
     
     var body: some View{
-        ScrollView{
+        ScrollView(.vertical){
             VStack{
                 HStack{
                     Text(data?.title ?? "")
                         .font(.title)
-
-                    favoriteButton
                 }
-
+                favoriteButton
+                
                 WebImage(url: data?.imageUrl)
                     .resizable()
                     .scaledToFit()
                     .cornerRadius(30)
                     .frame(width: 350, height: 330)
                     .transition(.fade(duration: 0.5))
-                
-                HStack {
-                    Text("Instructions")
-                        .font(.custom("The Bugatten", size: 100))
-                        .gradientText(colors: [.bg1, .bg2])
-                        .offset(x:30, y:-20)
+                    .offset(y:-50)
+                    .clipped()
+                    .shadow(color: Color.bg1, radius: 10, x: 0, y: 0)
+                Group{
+                    HStack {
+                        Text("Instructions")
+                            .font(.custom("The Bugatten", size: 100))
+                            .gradientText(colors: [.bg1, .bg2])
+                            .offset(x:30, y:-20)
+                        
+                        Spacer().frame(width: 70)
+                        
+                        Button(action: {
+                            self.isExtended.toggle()
+                        }) {
+                            Image(systemName: extendIcon)
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .accentColor(.black)
+                        }
+                    }.padding(.horizontal)
                     
-                    Spacer().frame(width: 70)
+                    Text(data?.instructions ?? "")
+                        .font(.body)
+                        .lineLimit(isExtended ? nil : 3)
+                        .multilineTextAlignment(.leading)
                     
-                    Button(action: {
-                        self.isExtended.toggle()
-                    }) {
-                        Image(systemName: extendIcon)
-                            .resizable()
-                            .frame(width: 25, height: 25)
-                            .accentColor(.black)
-                    }
-                }.padding(.horizontal)
-                
-                Text(data?.instructions ?? "")
-                    .font(.body)
-                    .lineLimit(isExtended ? nil : 3)
-                    .multilineTextAlignment(.leading)
-                    
-                Spacer()
-                
+                    Spacer()
+                }.offset(y:-70)
             }
             .padding()
-            .offset(y:-50)
         }
         .onAppear(perform: get)
     }

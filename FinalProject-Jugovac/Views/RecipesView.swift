@@ -15,13 +15,13 @@ struct RecipesView: View {
     var body: some View {
         NavigationView{
                 VStack{
-                    TitleText(title: "Choose Recipe").offset(y:-70)
-                    
+                    TitleText(title: "Choose Recipe")
+                        .offset(y:-70)
                     List {
                         ForEach(network.recipes){ recipe in
                             ZStack{
                                 CustomRow(recipe: recipe)
-                                NavigationLink(destination: DetailView(network: self.network, recipe: recipe)){
+                                NavigationLink(destination: DetailView(network: self.network, recipe: recipe).offset(y:-80)){
                                     EmptyView()
                                 }
                             }
@@ -31,9 +31,7 @@ struct RecipesView: View {
                         UITableView.appearance().separatorStyle = .none
                     }
                     .offset(y:-50)
-                        
-                        
-                    
+   
                 }.padding()
                  .frame(height: UIScreen.main.bounds.height * 0.98)
                  .cornerRadius(30)
@@ -56,7 +54,7 @@ struct CustomButton:View{
                 .onTapGesture {
                     self.session.signOut()
             }
-        }
+        }.transition(.slide)
     }
 }
 
